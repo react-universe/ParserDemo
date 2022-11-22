@@ -31,6 +31,8 @@ jobs:
       run : pwd
     - name: Back File
       run : cd ..
+    - name: check file
+      run : ls
     - name: Install Dependencies
       run: npm install
     - name: Test File
