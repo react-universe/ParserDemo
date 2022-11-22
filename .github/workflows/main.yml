@@ -20,21 +20,14 @@ permissions:
 
 jobs:
   parser:
-    runs-on: ubuntu-latest
     name: setup JOBS
     steps:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
-    - name: Path
-      run : pwd
-    - name: Back File
-      run : cd ..
-    - name: check file
-      run : ls
     - name: Install Dependencies
       run: npm install
     - name: Test File
-      run: npm run test
+      run: npm run dev
       
