@@ -29,8 +29,8 @@ jobs:
         node-version: '16.x'
     - name: Path
       run : pwd
-    - name: check list
-      run : ls
+    - name: Back File
+      run : cd ..
     - name: Install Dependencies
       run: npm install
     - name: Test File
