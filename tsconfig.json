@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "lib": ["ES2019"],
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": false, 
+    "inlineSources": false,
+    "types": ["node"]
+  }
+}
