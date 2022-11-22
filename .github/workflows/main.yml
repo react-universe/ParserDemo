@@ -27,6 +27,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
+    - name: Path
+      run : pwd
     - name: Install Dependencies
       run: npm install
     - name: Test File
