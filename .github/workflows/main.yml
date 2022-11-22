@@ -1,0 +1,34 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+# This workflow integrates njsscan with GitHub's Code Scanning feature
+# nodejsscan is a static security code scanner that finds insecure code patterns in your Node.js applications
+
+name: njsscan sarif
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  parser:
+    runs-on: ubuntu-latest
+    name: njsscan code scanning
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.x'
+    - name: Install Dependencies
+      run: npm install
+    - name: Test File
+      run: npm run test
+      
