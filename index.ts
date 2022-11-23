@@ -1,2 +1,3 @@
-//antlr programmes
-console.log("node")
+import JavaDemo from "./src/JavaDemo";
+
+JavaDemo()
