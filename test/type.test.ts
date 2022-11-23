@@ -42,10 +42,9 @@ const Test3 = (Vals:boolean) => {
 }
 
 async function CollabTest(){
-    console.log("Test1 : ",await Test1(true))
-    console.log("Test2 : ",await Test2(false))
-    console.log("Test3 : ",await Test3(true))
-    return;
+    Test1(true).then((res)=>console.log("Test 1 : ", res)).catch(err => console.log("Test 1 : ", err))
+    Test1(false).then((res)=>console.log("Test 2 : ", res)).catch(err => console.log("Test 2 : ", err))
+    Test1(true).then((res)=>console.log("Test 3 : ", res)).catch(err => console.log("Test 3 : ", err))
 }
 
 CollabTest()
